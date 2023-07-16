@@ -1,0 +1,8 @@
+#!/bin/bash
+concatenated_args=""
+for arg in "$@"; do
+    concatenated_args+=" $arg"
+done
+script_directory=$(dirname "$0")
+script_directory+="/cmd_assistance.py"
+python3 $script_directory $concatenated_args
